@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  daas-db:
+    image: postgres:14.4
+    container_name: daasdb
+    volumes:
+      - /var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: daas
+      POSTGRES_USER: daas
+      POSTGRES_PASSWORD: daas
+    ports:
+      - "5431:5432"

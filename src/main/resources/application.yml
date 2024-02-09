@@ -1,0 +1,17 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: daas-app
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5431}/${DB_NAME:daas}
+    username: ${DB_USERNAME:daas}
+    password: ${DB_PASSWORD:daas}
+  flyway:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5431}/${DB_NAME:daas}
+    user: ${DB_USERNAME:daas}
+    password: ${DB_PASSWORD:daas}
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
